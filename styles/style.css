@@ -1,4 +1,150 @@
 .gradient-custom-2 {
+    background: #1e3a5f; /* Deep Blue */
+    
+    background: -webkit-linear-gradient(to right, #0a192f, #1e3a5f, #3b5998, #0f3057);
+    
+    background: linear-gradient(to right, #0a192f, #1e3a5f, #3b5998, #0f3057);
+}
+
+@media (min-width: 768px) {
+    .gradient-form {
+        height: 100vh !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .gradient-custom-2 {
+        border-top-right-radius: .3rem;
+        border-bottom-right-radius: .3rem;
+    }
+}
+
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #0a192f; /* Dark Navy Blue */
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to bottom right, rgba(15, 48, 87, 1), rgba(0, 0, 0, 1));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to bottom right, rgba(15, 48, 87, 1), rgba(0, 0, 0, 1));
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    color: #ffffff; /* White text for contrast */
+    background-color: #1e3a5f; /* Dark blue background */
+    border: 1px solid #3b5998; /* Light blue border */
+}
+
+.card-registration .select-arrow {
+    top: 13px;
+    color: #3b5998; /* Light blue arrow */
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #0a192f;
+    background: linear-gradient(to right, #0a192f, #1e3a5f, #3b5998, #0f3057);
+    margin: 0;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    background: linear-gradient(to bottom right, rgba(15, 48, 87, 1), rgba(0, 0, 0, 1));
+    transition: 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+/* Ensure images stay visible on smaller screens */
+.corner-image {
+    position: absolute;
+    width: 80px; /* Adjust as needed */
+    height: auto;
+    top: 10px; /* Distance from the top */
+    z-index: 1000; /* Ensures images stay on top */
+}
+
+.left {
+    left: 10px; /* Distance from the left */
+}
+
+.right {
+    right: 10px; /* Distance from the right */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .corner-image {
+        width: 60px; /* Smaller size for mobile screens */
+    }
+}
+.content {
+    flex: 1;
+}
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.footer img {
+    max-width: 200px;
+    margin: 0 15px;
+}
+iframe{
+    margin-left:50%;
+    transform:translate(-25%,0%);
+    height: 70vh;
+    width:100% ;
+}
+button{
+    width: fit-content;
+    margin-left:50%;
+    transform:translate(-25%,0%);
+}
+#danieli{
+    height: 70
+}
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+    overflow: hidden; /* Ensures no extra scrollbars */
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+    overflow: hidden;
+    object-fit: cover; /* Ensures the video fills the frame */
+}
+
+/* .gradient-custom-2 {
     background: #fccb90;
     
     background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
@@ -18,13 +164,10 @@
     }
     }
     .gradient-custom {
-        /* fallback for old browsers */
         background: #f093fb;
         
-        /* Chrome 10-25, Safari 5.1-6 */
         background: -webkit-linear-gradient(to bottom right, rgba(240, 147, 251, 1), rgba(245, 87, 108, 1));
         
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         background: linear-gradient(to bottom right, rgba(240, 147, 251, 1), rgba(245, 87, 108, 1))
         }
         
@@ -37,3 +180,4 @@
         .card-registration .select-arrow {
         top: 13px;
         }
+       */

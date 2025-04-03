@@ -3,8 +3,8 @@ include 'db_connection.php';
 session_start();
 if(isset($_POST['submit'])){
 
-$email = $_POST['email'];
-$user_password = $_POST['user_password'];
+$email = mysqli_real_escape_string($db_connection,$_POST['email']);
+$user_password = mysqli_real_escape_string($db_connection,$_POST['user_password']);
 
 $query = "SELECT access_password FROM user_access WHERE email = '$email'";
 
@@ -14,15 +14,25 @@ mysqli_free_result($recieve);
 
 
 if($output == null){
-    echo "Your email doesn't exist in the database!";
+    header("Location: notfound.php");
 }
 else if(password_verify($user_password, $output[0]['access_password'])){
     $_SESSION['email'] = $email;
+    $lock_file = "lock.txt";
+
+    if (file_exists($lock_file)) {
+        header("Location: another.php");
+        exit();
+    }
+    
+    file_put_contents($lock_file, "locked");
+
     header("Location: dashboard.php");
     exit();
 }
 else{
-    echo "You have entered a wrong password!";
+    header("Location: wrongPassword.php");
+    exit();
 }
 }
 mysqli_close($db_connection);
